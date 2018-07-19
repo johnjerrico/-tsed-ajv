@@ -1,2 +1,2 @@
-# -tsed-ajv
+# tsed-ajv
 customaziable @tsed/ajv behaviour  

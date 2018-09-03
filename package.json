@@ -2,7 +2,7 @@
   "name": "tsed-ajv-custom",
   "version": "1.0.0",
   "description": "bundled ajv error report",
-  "main": "./release/bundles/tsed-custom-ajv.umd.ts",
+  "main": "./release/bundles/tsed-ajv.umd.ts",
   "scripts": {
     "prepare": "install-self-peers -- --ignore-scripts",
     "clean:pre": "rimraf release",

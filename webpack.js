@@ -11,8 +11,8 @@ module.exports = {
     entry: 'index.ts',
     output: {
         "path": path.resolve(__dirname,'release','bundles'),
-        "filename": 'tsed-custom-ajv.umd.js',
-        "library": 'tsed-custom-ajv',
+        "filename": 'tsed-ajv.umd.js',
+        "library": 'tsed-ajv',
         "libraryTarget": 'umd',
         "umdNamedDefine": true
     },

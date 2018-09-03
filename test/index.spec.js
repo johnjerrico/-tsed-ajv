@@ -1,0 +1,1 @@
+require("../release/bundles/tsed-ajv.umd.js")

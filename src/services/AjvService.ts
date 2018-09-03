@@ -1,10 +1,21 @@
-import {ConverterService, JsonSchemesService, OverrideService, ServerSettingsService, ValidationService} from "@tsed/common";
+import {
+    ConverterService,
+    JsonSchemesService,
+    OverrideService,
+    ServerSettingsService,
+    ValidationService
+} from "@tsed/common";
 import {nameOf, Type} from "@tsed/core";
 import * as Ajv from "ajv";
 import {ErrorObject} from "ajv";
 import {$log} from "ts-log-debug";
 import {AjvValidationError} from "../errors/AjvValidationError";
-import {AjvErrorObject, ErrorFormatter, IAjvOptions, IAjvSettings} from "../interfaces/IAjvSettings";
+import {
+    AjvErrorObject,
+    ErrorFormatter,
+    IAjvOptions,
+    IAjvSettings
+} from "../interfaces/IAjvSettings";
 
 @OverrideService(ValidationService)
 export class AjvService extends ValidationService {
@@ -16,7 +27,7 @@ export class AjvService extends ValidationService {
         private converterService: ConverterService
     ){
         super();
-        const ajvSettings:IAjvSettings = this.serverSettingsService.get("ajv") || {};
+        const ajvSettings:IAjvSettings = serverSettingsService.get("ajv") || {};
         this.options = Object.assign(
             {
                 verbose: false

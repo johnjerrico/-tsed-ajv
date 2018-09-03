@@ -23,11 +23,11 @@ export class AjvService extends ValidationService {
     private options: IAjvOptions;
     constructor(
         private jsonSchemaService: JsonSchemesService,
-        private serverSettingsService: ServerSettingsService,
+        // private serverSettingsService: ServerSettingsService,
         private converterService: ConverterService
     ){
         super();
-        const ajvSettings:IAjvSettings = serverSettingsService.get("ajv") || {};
+        const ajvSettings:IAjvSettings = {};// serverSettingsService.get("ajv") || {};
         this.options = Object.assign(
             {
                 verbose: false

@@ -1,0 +1,53 @@
+{
+  "name": "tsed-ajv-custom",
+  "version": "1.0.0",
+  "description": "bundled ajv error report",
+  "main": "./release/bundles/tsed-custom-ajv.umd.ts",
+  "scripts": {
+    "prepare": "install-self-peers -- --ignore-scripts",
+    "clean:pre": "rimraf release",
+    "test": "karma start karma.conf.js",
+    "build:js": "node_modules/.bin/webpack --profile --colors --config webpack.js",
+    "prebuild": "npm run clean:pre",
+    "build": "npm run build:js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnjerrico/tsed-ajv.git"
+  },
+  "keywords": [
+    "ajv",
+    "@tsed"
+  ],
+  "author": "Romain Lenzotti",
+  "co-author": "John Jerrico",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnjerrico/tsed-ajv/issues"
+  },
+  "homepage": "https://github.com/johnjerrico/tsed-ajv#readme",
+  "devDependencies": {
+    "@team-griffin/install-self-peers": "^1.1.1",
+    "awesome-typescript-loader": "^5.2.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7.1.5",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-runtime": "^6.26.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.0.3",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "peerDependencies": {
+    "@tsed/common": "^4.30.6",
+    "@tsed/core": "^4.30.6",
+    "ajv": "^6.5.3",
+    "ts-log-debug": "^4.0.4"
+  }
+}

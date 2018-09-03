@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "typeRoots": ["node_modules/@types/**/*.d.ts","./types"],
+        "moduleResolution": "node",
+        "experimentalDecorators":true,
+        "emitDecoratorMetadata": true,
+        "sourceMap": true,
+        "declaration": false,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "*",
+                "./node_modules/*",
+                "./src/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "./src/webconfig.ts",
+        "./src/entities/index.ts",
+        "./dist/**/*",
+        "node_modules"
+    ]
+  }

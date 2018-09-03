@@ -1,5 +1,5 @@
 {
-  "name": "tsed-ajv-custom",
+  "name": "tsed-ajv",
   "version": "1.0.0",
   "description": "bundled ajv error report",
   "main": "./release/bundles/tsed-ajv.umd.ts",

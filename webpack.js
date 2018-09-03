@@ -9,6 +9,7 @@ const DefinePlugin = webpack.DefinePlugin;
 module.exports = {
     context: src,
     entry: 'index.ts',
+    target: 'node',
     output: {
         "path": path.resolve(__dirname,'release','bundles'),
         "filename": 'tsed-ajv.umd.js',
